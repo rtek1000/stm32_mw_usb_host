@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2015 STMicroelectronics.
+  * Copyright (c) 2023 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -160,7 +160,7 @@ static USBH_StatusTypeDef USBH_CDC_InterfaceInit(USBH_HandleTypeDef *phost)
 
   if ((interface == 0xFFU) || (interface >= USBH_MAX_NUM_INTERFACES)) /* No Valid Interface */
   {
-    USBH_DbgLog("Cannot Find the interface for Communication Interface Class.", phost->pActiveClass->Name);
+    USBH_DbgLog("Cannot Find the interface for Communication Interface Class %s", phost->pActiveClass->Name);
     return USBH_FAIL;
   }
 
@@ -205,7 +205,7 @@ static USBH_StatusTypeDef USBH_CDC_InterfaceInit(USBH_HandleTypeDef *phost)
 
   if ((interface == 0xFFU) || (interface >= USBH_MAX_NUM_INTERFACES)) /* No Valid Interface */
   {
-    USBH_DbgLog("Cannot Find the interface for Data Interface Class.", phost->pActiveClass->Name);
+    USBH_DbgLog("Cannot Find the interface for Data Interface Class %s", phost->pActiveClass->Name);
     return USBH_FAIL;
   }
 
